@@ -1,0 +1,20 @@
+CREATE TABLE Bericht (
+				Naam varchar(140) NOT NULL,
+				Datum date NOT NULL,
+				Tijd time NOT NULL,
+				Bericht varchar(140) NOT NULL,
+				Station varchar(140) NOT NULL,
+				Beoordeling BOOLEAN,
+				BerichtID SERIAL NOT NULL,
+				PRIMARY KEY (BerichtID)
+				);
+CREATE TABLE Beoordeling (
+				Mod_email varchar(140) NOT NULL,
+				bd_datum date NOT NULL,
+				bd_tijd time NOT NULL,
+				Mod_naam varchar(140) NOT NULL,
+				BerichtID SERIAL NOT NULL,
+				FOREIGN KEY (BerichtID)
+				REFERENCES Bericht(BerichtID)
+				);
+				

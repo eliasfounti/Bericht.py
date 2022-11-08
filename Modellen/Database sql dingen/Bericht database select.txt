@@ -1,0 +1,8 @@
+SELECT
+    *
+FROM
+    bericht
+JOIN
+    beoordeling
+ON
+    bericht.berichtid = beoordeling.berichtid
